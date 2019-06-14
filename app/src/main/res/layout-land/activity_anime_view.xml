@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnimeViewActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/animeViewToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="4dp"
+        android:background="?attr/colorPrimary"
+        app:theme="@style/AppTheme.Toolbar"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/animeViewToolbar">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:id="@+id/avImage"
+                        android:contentDescription="@string/image_of_the_anime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:layout_margin="10dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginEnd="0dp"/>
+
+                    <TextView
+                        android:id="@+id/avTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/avImage"
+                        android:layout_toEndOf="@id/avImage"
+                        android:paddingLeft="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="0dp"
+                        android:text="@string/title"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/avStatusTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/avTitle"
+                        android:layout_toRightOf="@id/avImage"
+                        android:layout_toEndOf="@id/avImage"
+                        android:padding="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="5dp"
+                        android:paddingRight="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/status"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/avStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/avTitle"
+                        android:layout_toRightOf="@id/avStatusTag"
+                        android:layout_toEndOf="@id/avStatusTag"
+                        android:padding="5dp"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/avRatingTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/avTitle"
+                        android:layout_toRightOf="@id/avStatus"
+                        android:layout_toEndOf="@id/avStatus"
+                        android:padding="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="5dp"
+                        android:paddingRight="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/rating"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/avRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/avTitle"
+                        android:layout_toRightOf="@id/avRatingTag"
+                        android:layout_toEndOf="@id/avRatingTag"
+                        android:padding="5dp"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/avSynopsis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/avStatusTag"
+                        android:layout_toRightOf="@id/avImage"
+                        android:layout_toEndOf="@id/avImage"
+                        android:padding="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/synopsis"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/avYoutubeTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/avSynopsis"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="0dp"
+                        android:text="@string/trailers"
+                        android:textStyle="bold"
+                        android:textSize="16sp" />
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/avTrailerSection"
+                        android:layout_below="@id/avYoutubeTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/trailerImage1"
+                            android:layout_width="120dp"
+                            android:layout_height="90dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:layout_constraintBottom_toTopOf="@+id/trailerText2"
+                            app:layout_constraintEnd_toStartOf="@+id/trailerImage2"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/trailerText1"
+                            android:layout_width="120dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/trailerText2"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/trailerImage1" />
+
+
+
+                        <ImageView
+                            android:id="@+id/trailerImage2"
+                            android:layout_width="120dp"
+                            android:layout_height="90dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:layout_constraintBottom_toTopOf="@+id/trailerText1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/trailerImage1"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/trailerText2"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/trailerText1"
+                            app:layout_constraintTop_toBottomOf="@+id/trailerImage2" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/avEpisodeTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/avTrailerSection"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="0dp"
+                        android:text="@string/episodes"
+                        android:textStyle="bold"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/avLowerEpisode"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginBottom="-5dp"
+                        android:padding="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingEnd="10dp"
+                        android:layout_below="@id/avTrailerSection"
+                        android:layout_toRightOf="@id/avEpisodeTitle"
+                        android:layout_toEndOf="@id/avEpisodeTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="-"/>
+
+                    <TextView
+                        android:id="@+id/avEpisodeCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/avTrailerSection"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_toEndOf="@id/avLowerEpisode"
+                        android:layout_toRightOf="@id/avLowerEpisode"
+                        android:text="0"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/avIncreaseEpisode"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginBottom="-5dp"
+                        android:padding="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingEnd="10dp"
+                        android:layout_below="@id/avTrailerSection"
+                        android:layout_toRightOf="@id/avEpisodeCount"
+                        android:layout_toEndOf="@id/avEpisodeCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="+"/>
+
+                    <ListView
+                        android:id="@+id/avEpisodes"
+                        android:layout_marginTop="10dp"
+                        android:nestedScrollingEnabled="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_below="@id/avEpisodeTitle"/>
+                </RelativeLayout>
+        </ScrollView>
+
+</RelativeLayout>
